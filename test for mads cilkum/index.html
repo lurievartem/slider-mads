@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Untitled</title>
+	<meta name="viewport" content="width=device-width">
+	<style type="text/css">
+		body {
+			font: 0.9em sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+
+<h1>MADS test task</h1>
+
+<h2>Description</h2>
+
+<p>Create Swipe image slider like in examples:</p>
+
+<object width="600" height="450" data="2014-03-04_1143.swf"></object>
+
+<object width="600" height="450" data="2014-03-04_1156.swf" style="margin-left: 50px;"></object>
+
+<p>As you can see from videos it should have two animation types. It can be whether "Slide" or "Fade in" animation.</p>
+
+<h2>Requirements</h2>
+
+<ul>
+	<li>Write code in Object Oriented style. Create base class and extended with two subclassed, one for "Slide" and another for "Fade in" animation types.</li>
+	<li>Do not use jQuery or other general purpose frameworks.</li>
+	<li>Use native JS or self written function for DOM manipulation and Events handling.</li>
+	<li>You can use libraries for Class inheritance emulation (such as jsclass) or for module loading (such as requireJS). Or you can use something self written. Or you can not use it at all.</li>
+	<li>Use CSS3 transitions for Slide and Fade in animations.</li>
+	<li>Slider should handle both Mouse and Touch events. That means user should be able to change slides by swiping by mouse or by finger (on touch devices).</li>
+	<li>Primarily this slider supposed for mobile devices, but it also should work fine in desktop browser.</li>
+	<li>Browser support:
+		<ul>
+			<li>Last version of Google Chrome</li>
+			<li>
+				Any mobile browser on smartphone (Android, iOS, Windows Phone).
+				If you don't have a mobile browser you can emulate it using <a href="2014-03-04_1226.png">Google Chrome Developer tools</a>.
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<h2>Swipe slider configuration</h2>
+
+<p>Use this configurational object for swipe slider:</p>
+
+<pre><code>var config = {
+	// arbitrary number of images
+	images: [
+		'http://example.com/image-1.jpg',
+		'http://example.com/image-2.jpg',
+		'http://example.com/image-3.jpg',
+		'http://example.com/image-4.jpg'
+	],
+	// possible values: 'auto', 'manual', 'automanual'
+	mode: 'auto',
+	// arbitrary interger (miliseconds)
+	swipeSpeed: 500,
+	// arbitrary interger (miliseconds). This is used in 'auto' and 'automanual' modes
+	swipeDelay: 3000
+};
+</code></pre>
+
+<p>Explanation:</p>
+
+<ul>
+	<li><tt>images</tt> — Array of images that will represent slides of Swipe slider. Possible number of images: from 2 to ∞.</li>
+	<li>
+		<tt>mode</tt> — String
+		<ul>
+			<li><tt>auto</tt> — slides will be changed automatically. User can not interact with slider.</li>
+			<li><tt>manual</tt> — only user should be able to change slides by making swipe gesture by mouse or by finger (on touch devices).</li>
+			<li><tt>automanual</tt> — both of two previous. Slides are changed automatically and user is able to change them manually.</li>
+		</ul>
+	</li>
+	<li><tt>swipeSpeed</tt> — the speed of animation.</li>
+	<li><tt>swipeDelay</tt> — delay between slides change in automatical swipe mode. Ignored in 'manual' mode.</li>
+</ul>
+
+<h2>In case of any questions regarding this test task</h2>
+
+<p>You can contact me:</p>
+
+<ul>
+	<li>email: cake.seller@gmail.com</li>
+	<li>skype: cake_seller</li>
+</ul>
+
+</body>
+</html>
